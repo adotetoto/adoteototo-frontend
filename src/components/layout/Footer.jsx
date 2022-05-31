@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <p>
         <span className="bold">Adote o toto</span> &copy;2022
       </p>
