@@ -1,9 +1,11 @@
 import React from "react";
 import Input from "../form/Input";
+import styles from "../form/form.module.css";
+import { Link } from "react-router-dom";
 const Register = () => {
   function handleChange() {}
   return (
-    <section>
+    <section className={styles.form_container}>
       <h1>Registrar</h1>
       <form>
         <Input
@@ -46,6 +48,9 @@ const Register = () => {
         />
         <input type="submit" value="Cadastrar" />
       </form>
+      <p>
+        Já tem conta ? <Link to="/login">Clique aqui</Link>
+      </p>
     </section>
   );
 };
