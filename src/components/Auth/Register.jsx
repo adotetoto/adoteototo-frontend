@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Input from "../form/Input";
 import styles from "../form/form.module.css";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/UserContext";
+
 const Register = () => {
   const [user, setUser] = useState({});
+  const { register } = useContext(Context);
   function handleChange(e) {
     // vai formar um objeto definindo cada campo uma chave e valor formando o objeto user
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -11,7 +14,7 @@ const Register = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(user);
+    register(user);
   }
   return (
     <section className={styles.form_container}>
