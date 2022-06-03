@@ -14,7 +14,12 @@ const Navbar = () => {
           <Link to="/">Adotar</Link>
         </li>
         {authenticated ? (
-          <li onClick={logout}>Sair</li>
+          <>
+            <li>
+              <Link to="/users/profile">Perfil</Link>
+            </li>
+            <li onClick={logout}>Sair</li>
+          </>
         ) : (
           <>
             <li>

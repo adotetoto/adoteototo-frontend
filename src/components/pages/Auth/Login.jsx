@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Context } from "../../context/UserContext";
-import Input from "../form/Input";
-import styles from "../form/form.module.css";
+import { Context } from "../../../context/UserContext";
+import Input from "../../form/Input";
+import styles from "../../form/form.module.css";
 import { Link } from "react-router-dom";
 const Login = () => {
   const [user, setUser] = useState({});
