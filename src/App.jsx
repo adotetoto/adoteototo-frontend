@@ -6,6 +6,7 @@ import Register from "./components/Auth/Register";
 import Home from "./components/Home";
 import Container from "./components/layout/Container";
 import Footer from "./components/layout/Footer";
+import Message from "./components/layout/Message";
 import Navbar from "./components/layout/Navbar";
 import { Context, UserProvider } from "./context/UserContext";
 
@@ -14,6 +15,7 @@ const App = () => {
     <Router>
       <UserProvider>
         <Navbar />
+        <Message />
         <Container>
           <Routes>
             <Route path="/" element={<Home />}></Route>
