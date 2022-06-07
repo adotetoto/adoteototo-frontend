@@ -10,6 +10,7 @@ import Message from "./components/layout/Message";
 import Navbar from "./components/layout/Navbar";
 import { Context, UserProvider } from "./context/UserContext";
 import Profile from "./components/pages/User/Profile";
+import MyPets from "./components/pages/Pet/MyPets";
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
             <Route path="/" element={<Home />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/login" element={<Login />}></Route>
-            <Route path="/users/profile" element={<Profile />}></Route>
+            <Route path="/user/profile" element={<Profile />}></Route>
+            <Route path="/pet/mypets" element={<MyPets />}></Route>
           </Routes>
         </Container>
         <Footer />
