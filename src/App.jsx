@@ -11,6 +11,7 @@ import Navbar from "./components/layout/Navbar";
 import { Context, UserProvider } from "./context/UserContext";
 import Profile from "./components/pages/User/Profile";
 import MyPets from "./components/pages/Pet/MyPets";
+import AddPet from "./components/pages/Pet/AddPet";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/user/profile" element={<Profile />}></Route>
             <Route path="/pet/mypets" element={<MyPets />}></Route>
+            <Route path="/pet/add" element={<AddPet />}></Route>
           </Routes>
         </Container>
         <Footer />

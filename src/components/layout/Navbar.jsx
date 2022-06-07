@@ -21,6 +21,7 @@ const Navbar = () => {
             <li>
               <Link to="/pet/mypets">Meus pets</Link>
             </li>
+
             <li onClick={logout}>Sair</li>
           </>
         ) : (
