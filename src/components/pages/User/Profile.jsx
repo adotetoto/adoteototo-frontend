@@ -4,6 +4,7 @@ import formStyles from "../../form/form.module.css";
 import Input from "../../form/Input";
 import styles from "./Profile.module.css";
 import useFlashMessage from "../../../hooks/useFlashMessage";
+import RoundedImage from "../../layout/RoundedImage";
 
 const Profile = () => {
   const [user, setUser] = useState({});
@@ -64,7 +65,7 @@ const Profile = () => {
       <div className={styles.profile_header}>
         <h1>Perfil</h1>
         {(user.image || preview) && (
-          <img
+          <RoundedImage
             src={
               preview
                 ? URL.createObjectURL(preview)
