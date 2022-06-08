@@ -6,6 +6,7 @@ import { useState } from "react";
 import { navigate } from "react-router-dom";
 
 import useFlashMessage from "../../../hooks/useFlashMessage";
+import PetForm from "../../form/PetForm";
 const AddPet = () => {
   return (
     <section className={styles.addpet_header}>
@@ -13,7 +14,7 @@ const AddPet = () => {
         <h1>Cadastre um pet</h1>
         <p>Depois ele ficará disponivel para adoção</p>
       </div>
-      <p>formulário</p>
+      <PetForm btnText="Cadastrar Pet" />
     </section>
   );
 };
