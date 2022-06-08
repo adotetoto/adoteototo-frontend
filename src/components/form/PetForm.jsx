@@ -22,8 +22,8 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
   }
   function submit(e) {
     e.preventDefault();
-    console.log(pet);
-    //handleSubmit(pet)
+
+    handleSubmit(pet);
   }
   return (
     <form onSubmit={submit} className={formStyles.form_container}>
