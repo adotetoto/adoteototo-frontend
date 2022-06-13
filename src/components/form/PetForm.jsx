@@ -37,7 +37,7 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
               />
             ))
           : pet.images &&
-            pet.image.map((image, index) => (
+            pet.images.map((image, index) => (
               <img
                 src={`${process.env.REACT_APP_API}/images/pets/${image}`}
                 alt={pet.name}
