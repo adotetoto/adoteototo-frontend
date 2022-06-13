@@ -28,7 +28,7 @@ const AddPet = () => {
     const data = await api
       .post("pets/create", formData, {
         Authorization: `Bearer ${JSON.parse(token)}`,
-        "Context-type": "multipart/form-data",
+        "Content-type": "multipart/form-data",
       })
       .then((response) => {
         return response.data;
@@ -40,7 +40,7 @@ const AddPet = () => {
 
     setFlashMessage(data.message, msgType);
     if (msgType !== "error") {
-      navigate("/pets/mypets");
+      navigate("/pet/mypets");
     }
   }
   return (
