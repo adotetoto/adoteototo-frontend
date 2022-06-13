@@ -3,8 +3,6 @@ import api from "../../../utils/api";
 import { Link } from "react-router-dom";
 import styles from "./Dashboard.module.css";
 
-import RoudedImage from "../../layout/RoundedImage";
-
 import useFlashMessage from "../../../hooks/useFlashMessage";
 import RoundedImage from "../../layout/RoundedImage";
 
@@ -27,16 +25,18 @@ const MyPets = () => {
 
   return (
     <section>
-      <h1>Meus pets</h1>
-      <Link to="/pet/add">Cadastrar Pet</Link>
-      <div>
+      <div className={styles.petslist_header}>
+        <h1>Meus pets</h1>
+        <Link to="/pet/add">Cadastrar Pet</Link>
+      </div>
+      <div className={styles.petslist_container}>
         {pets.length > 0 &&
           pets.map((pet) => (
-            <div key={pet._id}>
+            <div key={pet._id} className={styles.petlist_row}>
               <RoundedImage
                 src={`${process.env.REACT_APP_API}/images/pets/${pet.images[0]}`}
                 alt={pet.name}
-                width="75px"
+                width="px75"
               />
               <span className="bold">{pet.name}</span>
               <div className={styles.actions}>
