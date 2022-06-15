@@ -11,7 +11,6 @@ function Home() {
   useEffect(() => {
     api.get("/pets").then((response) => {
       setPets(response.data.pets);
-      console.log(pets);
     });
   }, []);
 
@@ -23,19 +22,30 @@ function Home() {
       </div>
 
       <div>
-        {pets.length > 0 &&
-          pets.map((pet) => (
-            <div>
-              <p>Imagem do Pet</p>
-              <h3>{pet.name}</h3>
-              <p>
-                <span className="bold">Peso:</span> {pet.weight}kg
-                <Link to={`pet/${pet._id}`}>Mais detalhes</Link>
-              </p>
-            </div>
-          ))}
+        <div className={styles.pet_container}>
+          {pets.length > 0 &&
+            pets.map((pet) => (
+              <div className={styles.pet_card} key={pet._id}>
+                <div
+                  style={{
+                    backgroundImage: `url(${process.env.REACT_APP_API}/images/pets/${pet.images[0]})`,
+                  }}
+                  className={styles.pet_card_image}
+                ></div>
+                <h3>{pet.name}</h3>
+                <p>
+                  <span className="bold">Peso:</span> {pet.weight}kg
+                </p>
 
-        {pets.length === 0 && <p>Não há pets cadastrados</p>}
+                <Link to={`/pet/${pet._id}`}>Mais detalhes</Link>
+              </div>
+            ))}
+          {pets.length === 0 && (
+            <p>
+              Não há pets cadastrados ou disponíveis para adoção no momento!
+            </p>
+          )}
+        </div>
       </div>
     </section>
   );
