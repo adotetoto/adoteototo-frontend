@@ -17,17 +17,19 @@ const PetDetails = () => {
   return (
     <>
       {pet.name && (
-        <section>
-          <div>
+        <section className={styles.pet_details_container}>
+          <div className={styles.petdetails_header}>
             <h1>Conhecendo o Pet: {pet.name}</h1>
           </div>
           <div>
             {pet.images.map((image, index) => (
-              <img
-                src={`${process.env.REACT_APP_API}/images/pets/${image}`}
-                alt={pet.name}
-                key={index}
-              />
+              <div className={styles.pet_images}>
+                <img
+                  src={`${process.env.REACT_APP_API}/images/pets/${image}`}
+                  alt={pet.name}
+                  key={index}
+                />
+              </div>
             ))}
           </div>
           <p>
