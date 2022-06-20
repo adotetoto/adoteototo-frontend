@@ -5,11 +5,13 @@ import Input from "../../form/Input";
 import styles from "./Profile.module.css";
 import useFlashMessage from "../../../hooks/useFlashMessage";
 import RoundedImage from "../../layout/RoundedImage";
+import Select from "../../form/Select";
 
 const Profile = () => {
   const [user, setUser] = useState({});
   const [preview, setPreview] = useState();
   const [token] = useState(localStorage.getItem("token") || "");
+  const citys = ["Porto Alegre", "Canoas"];
   const { setFlashMessage } = useFlashMessage();
   useEffect(() => {
     api
@@ -29,6 +31,9 @@ const Profile = () => {
   }
   function handleChange(e) {
     setUser({ ...user, [e.target.name]: e.target.value });
+  }
+  function handleCity(e) {
+    setUser({ ...user, city: e.target.options[e.target.selectedIndex].text });
   }
 
   const handleSubmit = async (e) => {
@@ -107,6 +112,21 @@ const Profile = () => {
           placeholder="Digite seu telefone"
           handleOnChange={handleChange}
           value={user.phone || ""}
+        />
+        <Select
+          name="city"
+          text="Selecione a sua cidade"
+          options={citys}
+          handleOnChange={handleCity}
+          value={user.city || ""}
+        />
+        <Input
+          text="Endereço"
+          type="text"
+          name="address"
+          placeholder="Digite o seu Endereço"
+          handleOnChange={handleChange}
+          value={user.address || ""}
         />
 
         <Input

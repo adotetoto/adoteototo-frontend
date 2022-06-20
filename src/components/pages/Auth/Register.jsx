@@ -3,13 +3,19 @@ import Input from "../../form/Input";
 import styles from "../../form/form.module.css";
 import { Link } from "react-router-dom";
 import { Context } from "../../../context/UserContext";
+import Select from "../../form/Select";
 
 const Register = () => {
   const [user, setUser] = useState({});
   const { register } = useContext(Context);
+  const citys = ["Porto Alegre", "Canoas"];
+
   function handleChange(e) {
     // vai formar um objeto definindo cada campo uma chave e valor formando o objeto user
     setUser({ ...user, [e.target.name]: e.target.value });
+  }
+  function handleCity(e) {
+    setUser({ ...user, city: e.target.options[e.target.selectedIndex].text });
   }
 
   function handleSubmit(e) {
@@ -33,6 +39,20 @@ const Register = () => {
           type="text"
           name="phone"
           placeholder="Digite o seu telefone"
+          handleOnChange={handleChange}
+        />
+        <Select
+          name="city"
+          text="Selecione a sua cidade"
+          options={citys}
+          handleOnChange={handleCity}
+          value={user.city || ""}
+        />
+        <Input
+          text="Endereço"
+          type="text"
+          name="address"
+          placeholder="Digite o seu Endereço"
           handleOnChange={handleChange}
         />
 
