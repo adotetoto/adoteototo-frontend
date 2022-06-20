@@ -1,16 +1,24 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Helvetica";
+  font-family: "Georgia, Times New Roman, Times, serif";
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #030518;
 }
 
 h1 {
-  color: #16479d;
+  color: #6088c6;
   margin-bottom: 1em;
   font-size: 2.1em;
 }
 .bold {
   font-weight: bold;
-  color: #16479d;
+  color: #6088c6;
+}
+p {
+  color: #fff;
 }

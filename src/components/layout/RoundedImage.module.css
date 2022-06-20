@@ -2,6 +2,7 @@
   width: 200px;
   height: 200px;
   border-radius: 100%;
+  border: 3px solid #b7d0f5;
 }
 .rounded_image.px75 {
   width: 75px;

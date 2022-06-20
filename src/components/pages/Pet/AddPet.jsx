@@ -26,14 +26,17 @@ const AddPet = () => {
     });
 
     const data = await api
-      .post("pets/create", formData, {
-        Authorization: `Bearer ${JSON.parse(token)}`,
-        "Content-type": "multipart/form-data",
+      .post(`pets/create`, formData, {
+        headers: {
+          Authorization: `Bearer ${JSON.parse(token)}`,
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then((response) => {
         return response.data;
       })
       .catch((err) => {
+        console.log(err);
         msgType = "error";
         return err.response.data;
       });

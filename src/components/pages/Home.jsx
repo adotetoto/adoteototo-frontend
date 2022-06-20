@@ -2,6 +2,7 @@ import api from "../../utils/api";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { FaInfo } from "react-icons/fa";
 
 import styles from "./Home.module.css";
 
@@ -33,11 +34,11 @@ function Home() {
                   className={styles.pet_card_image}
                 ></div>
                 <h3>{pet.name}</h3>
-                <p>
-                  <span className="bold">Peso:</span> {pet.weight}kg
-                </p>
 
-                <Link to={`/pet/${pet._id}`}>Mais detalhes</Link>
+                <Link to={`/pet/${pet._id}`}>
+                  <FaInfo />
+                  Mais detalhes
+                </Link>
               </div>
             ))}
           {pets.length === 0 && (

@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding: 1em 1.5em;
-  background-color: #ffd400;
-  color: #16479d;
+  margin-bottom: 2em;
+  background-color: #0a0c21;
+  color: #6088c6;
 }
 .navbar_logo {
   display: flex;
@@ -24,18 +25,16 @@
 .navbar li,
 .navbar a {
   text-decoration: none;
-  color: #16479d;
+  color: #6088c6;
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s;
   padding: 0.5em 0.8em;
   border-radius: 5px;
-}
-
-.navbar li:hover {
-  background-color: #16479d;
+  text-transform: uppercase;
 }
 
 .navbar li:hover > a {
-  color: #fff;
+  color: #b7d0f5;
+  border-bottom: 1px solid #b7d0f5;
 }
