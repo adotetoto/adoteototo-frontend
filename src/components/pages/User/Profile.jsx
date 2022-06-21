@@ -11,7 +11,14 @@ const Profile = () => {
   const [user, setUser] = useState({});
   const [preview, setPreview] = useState();
   const [token] = useState(localStorage.getItem("token") || "");
-  const citys = ["Porto Alegre", "Canoas"];
+  const citys = [
+    "Porto Alegre",
+    "Viamao",
+    "Canoas",
+    "Gravatai",
+    "Cachoeirinha",
+    "Esteio",
+  ];
   const { setFlashMessage } = useFlashMessage();
   useEffect(() => {
     api

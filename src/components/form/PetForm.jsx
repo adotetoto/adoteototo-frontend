@@ -76,7 +76,7 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
       />
       <Input
         text="Idade do Pet"
-        type="text"
+        type="number"
         name="age"
         placeholder="Digite a idade"
         handleOnChange={handleChange}
