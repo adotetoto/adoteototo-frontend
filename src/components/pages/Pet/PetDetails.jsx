@@ -23,11 +23,10 @@ const PetDetails = () => {
           </div>
           <div>
             {pet.images.map((image, index) => (
-              <div className={styles.pet_images}>
+              <div key={index} className={styles.pet_images}>
                 <img
                   src={`${process.env.REACT_APP_API}/images/pets/${image}`}
                   alt={pet.name}
-                  key={index}
                 />
               </div>
             ))}
@@ -38,6 +37,8 @@ const PetDetails = () => {
             {pet.user.name}
             <span className="bold">Para o número:</span>
             {pet.user.phone}
+            <span className="bold">{pet.user.city}</span>
+            <span className="bold">{pet.user.address}</span>
           </p>
         </section>
       )}

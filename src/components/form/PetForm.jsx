@@ -7,6 +7,8 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
   const [pet, setPet] = useState(petData || {});
   const [preview, setPreview] = useState([]);
   const colors = ["Branco", "Preto", "Cinza", "Caramelo", "Mesclado"];
+  const sizes = ["Pequeno", "Medio", "Grande"];
+  const sexs = ["Macho", "Femea"];
   function onFileChange(e) {
     setPreview(Array.from(e.target.files));
     setPet({ ...pet, images: [...e.target.files] });
@@ -18,6 +20,18 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
     setPet({
       ...pet,
       color: e.target.options[e.target.selectedIndex].text,
+    });
+  }
+  function handleSize(e) {
+    setPet({
+      ...pet,
+      size: e.target.options[e.target.selectedIndex].text,
+    });
+  }
+  function handleSex(e) {
+    setPet({
+      ...pet,
+      sex: e.target.options[e.target.selectedIndex].text,
     });
   }
   function submit(e) {
@@ -84,6 +98,29 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
         handleOnChange={handleColor}
         value={pet.color || ""}
       />
+      <Select
+        name="size"
+        text="Selecione o porte do pet"
+        options={sizes}
+        handleOnChange={handleSize}
+        value={pet.size || ""}
+      />
+      <Select
+        name="sex"
+        text="Selecione o sexo do pet"
+        options={sexs}
+        handleOnChange={handleSex}
+        value={pet.sex || ""}
+      />
+      <Input
+        text="Descrição do pet"
+        type="text"
+        name="description"
+        placeholder="Digite o peso do pet"
+        handleOnChange={handleChange}
+        value={pet.description || ""}
+      />
+
       <input type="submit" value={btnText} />
     </form>
   );
