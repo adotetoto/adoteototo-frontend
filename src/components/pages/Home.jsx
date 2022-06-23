@@ -8,6 +8,7 @@ import styles from "./Home.module.css";
 
 function Home() {
   const [pets, setPets] = useState([]);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     api.get("/pets").then((response) => {
@@ -15,11 +16,44 @@ function Home() {
     });
   }, []);
 
+  useEffect(() => {
+    if (filter) {
+      api.get(`/pets/filters/${filter}`).then((response) => {
+        setPets(response.data.pets);
+      });
+    } else {
+      api.get("/pets").then((response) => {
+        setPets(response.data.pets);
+      });
+    }
+  }, [filter]);
+
   return (
     <section>
       <div>
         <h1>Adote um Pet</h1>
         <p>Veja os detalhes de cada um conheça o tutor deles</p>
+      </div>
+
+      <div>
+        <h3>Filtro de sexo</h3>
+        <div>
+          <button onClick={() => setFilter("all")}>Todos</button>
+          <button onClick={() => setFilter("macho")}>Macho</button>
+          <button onClick={() => setFilter("femea")}>Femea</button>
+          <button onClick={() => setFilter("portoalegre")}>Porto Alegre</button>
+          <button onClick={() => setFilter("viamao")}>Viamão</button>
+          <button onClick={() => setFilter("canoas")}>Canoas</button>
+          <button onClick={() => setFilter("gravatai")}>Gravatai</button>
+          <button onClick={() => setFilter("cachoeirinha")}>
+            Cachoeirinha
+          </button>
+          <button onClick={() => setFilter("esteio")}>Esteio</button>
+          <button onClick={() => setFilter("viamao")}>Viamão</button>
+          <button onClick={() => setFilter("small")}>Pequeno</button>
+          <button onClick={() => setFilter("medium")}>Médio</button>
+          <button onClick={() => setFilter("great")}>Grande</button>
+        </div>
       </div>
 
       <div>

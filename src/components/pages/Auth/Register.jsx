@@ -8,7 +8,14 @@ import Select from "../../form/Select";
 const Register = () => {
   const [user, setUser] = useState({});
   const { register } = useContext(Context);
-  const citys = ["Porto Alegre", "Canoas"];
+  const citys = [
+    "Porto Alegre",
+    "Viamao",
+    "Canoas",
+    "Gravatai",
+    "Cachoeirinha",
+    "Esteio",
+  ];
 
   function handleChange(e) {
     // vai formar um objeto definindo cada campo uma chave e valor formando o objeto user
