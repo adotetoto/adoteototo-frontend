@@ -1,0 +1,20 @@
+.grid_imgs_container {
+  background-color: 0a0c21;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  justify-items: stretch;
+}
+.grid_imgs_container img {
+  transition: all 0.5s;
+  display: block;
+  max-width: 100%;
+}
+.grid_imgs_container img:hover {
+  transform: scale(1.2);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2em;
+}

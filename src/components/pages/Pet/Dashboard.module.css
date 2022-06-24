@@ -32,9 +32,9 @@
 }
 
 .petlist_row {
-  border-bottom: 1px solid #16479d;
+  background-color: #0a0c21;
   padding: 1em;
-  margin: 1em;
+  margin: 0.6em;
   display: flex;
   align-items: center;
   width: 100%;
@@ -56,7 +56,7 @@
 .actions button {
   text-decoration: none;
   color: #16479d;
-  border: 2px solid #16479d;
+  border: 4px solid #16479d;
   border-radius: 5px;
   padding: 7px 12px;
   background-color: #fff;
@@ -64,29 +64,20 @@
   cursor: pointer;
   transition: 0.3s;
   font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .actions a:hover,
-.actions button:hover {
-  background-color: #16479d;
+.edit {
+  border: 4px solid yellow;
+  background-color: rgb(199, 199, 34);
+  color: #222;
+}
+.actions button:hover,
+.del {
+  border: 4px solid red;
+
+  background-color: rgb(157, 63, 46);
   color: #fff;
-}
-
-.actions .conclude_btn {
-  color: #25b456;
-  border-color: #25b456;
-}
-
-.actions .conclude_btn:hover {
-  color: #fff;
-  background-color: #25b456;
-}
-
-/* my adoptions */
-.contacts {
-  margin-left: 2em;
-}
-
-.contacts p {
-  margin-bottom: 0.5em;
 }

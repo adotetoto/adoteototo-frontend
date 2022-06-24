@@ -39,6 +39,7 @@ const PetDetails = () => {
             {pet.user.phone}
             <span className="bold">{pet.user.city}</span>
             <span className="bold">{pet.user.address}</span>
+            <Link to={`/pet/gallery/${pet._id}`}>Galeria</Link>
           </p>
         </section>
       )}

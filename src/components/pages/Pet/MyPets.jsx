@@ -65,8 +65,11 @@ const MyPets = () => {
                 {pet.available ? (
                   <>
                     {pet.adopter && <button>Concluir adoção</button>}
-                    <Link to={`/pet/edit/${pet._id}`}>Editar</Link>
+                    <Link className={styles.edit} to={`/pet/edit/${pet._id}`}>
+                      Editar
+                    </Link>
                     <button
+                      className={styles.del}
                       onClick={() => {
                         removePet(pet._id);
                       }}
