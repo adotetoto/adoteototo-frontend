@@ -1,6 +1,8 @@
 .grid_imgs_container {
-  background-color: 0a0c21;
+  background-color: #0a0c21;
   display: grid;
+
+  background-color: #0a0c21;
 
   grid-template-columns: 1fr 1fr 1fr;
   align-items: stretch;

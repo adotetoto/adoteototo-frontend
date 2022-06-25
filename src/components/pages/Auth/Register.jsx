@@ -10,7 +10,7 @@ const Register = () => {
   const { register } = useContext(Context);
   const citys = [
     "Porto Alegre",
-    "Viamao",
+    "Viamão",
     "Canoas",
     "Gravatai",
     "Cachoeirinha",

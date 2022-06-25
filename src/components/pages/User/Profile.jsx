@@ -13,7 +13,7 @@ const Profile = () => {
   const [token] = useState(localStorage.getItem("token") || "");
   const citys = [
     "Porto Alegre",
-    "Viamao",
+    "Viamão",
     "Canoas",
     "Gravatai",
     "Cachoeirinha",

@@ -7,8 +7,8 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
   const [pet, setPet] = useState(petData || {});
   const [preview, setPreview] = useState([]);
   const colors = ["Branco", "Preto", "Cinza", "Caramelo", "Mesclado"];
-  const sizes = ["Pequeno", "Medio", "Grande"];
-  const sexs = ["Macho", "Femea"];
+  const sizes = ["Pequeno", "Médio", "Grande"];
+  const sexs = ["Macho", "Fêmea"];
   function onFileChange(e) {
     setPreview(Array.from(e.target.files));
     setPet({ ...pet, images: [...e.target.files] });

@@ -8,13 +8,7 @@ import styles from "./Home.module.css";
 
 function Home() {
   const [pets, setPets] = useState([]);
-  const [filter, setFilter] = useState("");
-
-  useEffect(() => {
-    api.get("/pets").then((response) => {
-      setPets(response.data.pets);
-    });
-  }, []);
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     api.get(`/pets/filters/${filter}`).then((response) => {
@@ -92,7 +86,7 @@ function Home() {
         <div className={styles.pet_filter_container}>
           <button onClick={() => setFilter("all")}>Todos</button>
           <button onClick={() => setFilter("macho")}>Macho</button>
-          <button onClick={() => setFilter("femea")}>Femea</button>
+          <button onClick={() => setFilter("femea")}>Fêmea</button>
           <button onClick={() => setFilter("portoalegre")}>Porto Alegre</button>
           <button onClick={() => setFilter("viamao")}>Viamão</button>
           <button onClick={() => setFilter("canoas")}>Canoas</button>
