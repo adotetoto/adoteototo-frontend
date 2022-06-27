@@ -121,3 +121,15 @@ section div p span {
     margin-top: 2em;
   }
 }
+
+@media (min-width: 601px) and (max-width: 860px) {
+  .pet_card {
+    width: 45%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+  .pet_card h3 {
+    margin: 0 auto;
+  }
+}

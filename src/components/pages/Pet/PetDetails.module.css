@@ -1,3 +1,21 @@
+.description_pet {
+  width: 100%;
+  margin-bottom: 32px;
+  border: 1px solid #b7d0f5;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+.description_pet h3 {
+  font-size: 28px;
+  color: #6088c6;
+  padding: 16px 16px;
+}
+.description_pet p {
+  word-break: break-all;
+}
+
 .grid_pet_info {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -19,6 +19,10 @@ const PetDetails = () => {
     <>
       {pet.name && (
         <section>
+          <div className={styles.description_pet}>
+            <h3>Descrição do Pet </h3>
+            <p>{pet.description}</p>
+          </div>
           <div className={styles.grid_pet_info}>
             <div className={styles.img_container}>
               <img
