@@ -116,7 +116,7 @@ const Profile = () => {
           text="Telefone"
           type="text"
           name="phone"
-          placeholder="Digite seu telefone"
+          placeholder="Por exemplo 051985013355"
           handleOnChange={handleChange}
           value={user.phone || ""}
         />

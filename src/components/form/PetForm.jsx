@@ -115,7 +115,7 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
       <textarea
         text="Descrição do pet"
         name="description"
-        placeholder="Digite o peso do pet"
+        placeholder="Digite a descrição do pet"
         onChange={handleChange}
         value={pet.description || ""}
       ></textarea>

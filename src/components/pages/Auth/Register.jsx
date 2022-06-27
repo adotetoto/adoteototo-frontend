@@ -45,7 +45,7 @@ const Register = () => {
           text="Telefone"
           type="text"
           name="phone"
-          placeholder="Digite o seu telefone"
+          placeholder="Por exemplo 051985013355"
           handleOnChange={handleChange}
         />
         <Select
