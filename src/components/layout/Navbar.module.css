@@ -38,3 +38,13 @@
   color: #b7d0f5;
   border-bottom: 1px solid #b7d0f5;
 }
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .navbar ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

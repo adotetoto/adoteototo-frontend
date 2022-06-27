@@ -51,3 +51,8 @@
   font-size: 1.7rem;
   font-weight: 500;
 }
+@media (max-width: 600px) {
+  .grid_pet_info {
+    grid-template-columns: 1fr;
+  }
+}

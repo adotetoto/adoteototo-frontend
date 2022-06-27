@@ -81,3 +81,9 @@
   background-color: rgb(157, 63, 46);
   color: #fff;
 }
+@media (max-width: 462px) {
+  .actions a,
+  .actions button {
+    margin: 2em;
+  }
+}

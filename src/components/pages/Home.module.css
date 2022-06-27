@@ -112,3 +112,12 @@ section div p span {
   color: #3467b3;
   font-weight: bold;
 }
+
+@media (max-width: 600px) {
+  .pet_card {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+}
