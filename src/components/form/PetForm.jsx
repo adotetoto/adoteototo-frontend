@@ -60,7 +60,7 @@ const PetForm = ({ handleSubmit, petData, btnText }) => {
             ))}
       </div>
       <Input
-        text="Imagens do Pet"
+        text="Imagens do Pet 500x900 melhor resolução"
         type="file"
         name="images"
         handleOnChange={onFileChange}

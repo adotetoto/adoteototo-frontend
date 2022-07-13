@@ -33,6 +33,7 @@
   justify-self: center;
   align-self: center;
 }
+
 .info_container ul {
   list-style: none;
 }
@@ -45,6 +46,7 @@
 }
 
 .info_container ul li a {
+  margin-right: 16px;
   font-size: 1.7rem;
   font-weight: 500;
   color: #b7d0f5;

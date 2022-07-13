@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import useFlashMessage from "../../../hooks/useFlashMessage";
 import api from "../../../utils/api";
 import styles from "./PetDetails.module.css";
-import { FaAmilia, FaDog } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const PetDetails = () => {
   const [pet, setPet] = useState({});
@@ -46,7 +46,7 @@ const PetDetails = () => {
                   <span>Falar com:</span> {pet.user.name}
                 </li>
                 <li>
-                  <span>Telefone {pet.user.name}:</span> {pet.user.phone}
+                  <span>Telefone: </span> {pet.user.phone}
                 </li>
                 <li>
                   <span>Endereço: </span>
@@ -58,6 +58,13 @@ const PetDetails = () => {
                 </li>
                 <li>
                   <Link to={`/pet/gallery/${pet._id}`}>Galeria</Link>
+                  <a
+                    className={styles.phone_wpp}
+                    target="_blank"
+                    href={` https://api.whatsapp.com/send?phone=55${pet.user.phone}&text=Olá,gostaria de ver mais informações sobre o dog ${pet.name}.`}
+                  >
+                    <FaWhatsapp />
+                  </a>
                 </li>
               </ul>
             </div>
